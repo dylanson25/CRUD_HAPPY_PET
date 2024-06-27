@@ -47,7 +47,7 @@ namespace CRUD_HAPPY_PET.Presenters
         #region Methods
         private void LoadAllPetList()
         {
-            petList = repository.GoAll();
+            petList = repository.GotAll();
             petBindingSource.DataSource = petList;
         }
 
