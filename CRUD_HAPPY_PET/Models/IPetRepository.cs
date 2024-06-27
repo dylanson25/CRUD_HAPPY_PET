@@ -11,7 +11,7 @@ namespace CRUD_HAPPY_PET.Models
         void Add(Pet pet);
         void Edit(Pet pet);
         void Delete(int id);
-        IEnumerable<Pet> GoAll();
-        IEnumerable<Pet> GoByValue(); //Search
+        IEnumerable<Pet> GotAll();
+        IEnumerable<Pet> GotByValue(string vlaue); //Search
     }
 }
