@@ -36,7 +36,7 @@
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
-            button1 = new Button();
+            btnSearch = new Button();
             txtSearch = new TextBox();
             label2 = new Label();
             tabPage2 = new TabPage();
@@ -93,7 +93,7 @@
             tabPage1.Controls.Add(button4);
             tabPage1.Controls.Add(button3);
             tabPage1.Controls.Add(button2);
-            tabPage1.Controls.Add(button1);
+            tabPage1.Controls.Add(btnSearch);
             tabPage1.Controls.Add(txtSearch);
             tabPage1.Controls.Add(label2);
             tabPage1.Location = new Point(4, 24);
@@ -139,14 +139,14 @@
             button2.Text = "Add new";
             button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnSearch
             // 
-            button1.Location = new Point(616, 37);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 2;
-            button1.Text = "Search";
-            button1.UseVisualStyleBackColor = true;
+            btnSearch.Location = new Point(616, 37);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(75, 23);
+            btnSearch.TabIndex = 2;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = true;
             // 
             // txtSearch
             // 
@@ -298,7 +298,7 @@
         private Button button4;
         private Button button3;
         private Button button2;
-        private Button button1;
+        private Button btnSearch;
         private TextBox txtSearch;
         private Label label6;
         private Label label5;

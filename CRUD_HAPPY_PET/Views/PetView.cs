@@ -21,6 +21,16 @@ namespace CRUD_HAPPY_PET.Views
         public PetView()
         {
             InitializeComponent();
+            AssociateAndRaiseEvents();
+        }
+
+        private void AssociateAndRaiseEvents()
+        {
+            btnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            txtSearch.KeyDown += (s, e) =>
+            {
+                if (e.KeyCode == Keys.Enter) SearchEvent?.Invoke(this, EventArgs.Empty);
+            };
         }
 
         #region Properties
