@@ -11,7 +11,7 @@ namespace CRUD_HAPPY_PET.Views
     public interface IPetView
     {
         //properties - Fields
-        sbyte PetId { get; set; }
+        string PetId { get; set; }
         string PetName { get; set; }
         string PetType { get; set; }
         string PetColour { get; set; }
