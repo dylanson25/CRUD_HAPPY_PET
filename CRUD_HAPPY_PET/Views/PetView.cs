@@ -55,7 +55,7 @@ namespace CRUD_HAPPY_PET.Views
         public event EventHandler CancelEvent;
         #endregion
 
-
+        #region Methods
         public void SetPetListBindingSource(BindingSource petList)
         {
             dataGridView1.DataSource = petList;
@@ -64,6 +64,22 @@ namespace CRUD_HAPPY_PET.Views
         private void PetView_Load(object sender, EventArgs e)
         {
 
+        }
+        #endregion
+
+        // Single Pattern (Open a single form instance)
+        private static PetView Instance;
+        public static PetView GetInstance()
+        {
+            if (Instance == null || Instance.IsDisposed)
+                Instance = new PetView();
+            else
+            {
+                if (Instance.WindowState == FormWindowState.Minimized)
+                    Instance.WindowState = FormWindowState.Normal;
+                Instance.BringToFront();
+            }
+            return Instance;
         }
     }
 }
