@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CRUD_HAPPY_PET.Views
 {
-    internal interface IMainView
+    public interface IMainView
     {
         event EventHandler ShowPetView;
         event EventHandler ShowOwnerView;

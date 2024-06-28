@@ -21,9 +21,8 @@ namespace CRUD_HAPPY_PET
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             string sqlConnectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
-            IPetView view = new PetView();
-            IPetRepository repository = new PetRepository(sqlConnectionString);
-            new PetPresenter(view, repository);
+            IMainView view = new MainView();
+            new MainPresenter(view, sqlConnectionString);
             Application.Run((Form)view);
         }
     }
