@@ -70,7 +70,7 @@ namespace CRUD_HAPPY_PET.Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = @"SELECT * FROM Pet WHERE Pet_Id=@id OR Pet_Name LIKE @name+'%' ORDER BY Pet_Id DESC";
+                command.CommandText = @"SELECT * FROM Pet WHERE Pet_Id=@id OR Pet_Name LIKE  CONCAT(@name, '%') ORDER BY Pet_Id DESC";
                 command.Parameters.Add("@id", MySqlDbType.Int32).Value = petId;
                 command.Parameters.Add("@name", MySqlDbType.VarChar).Value = petName;
                 using var reader = command.ExecuteReader();

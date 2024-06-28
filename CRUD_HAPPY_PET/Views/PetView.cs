@@ -22,6 +22,8 @@ namespace CRUD_HAPPY_PET.Views
         {
             InitializeComponent();
             AssociateAndRaiseEvents();
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+           
         }
 
         private void AssociateAndRaiseEvents()
