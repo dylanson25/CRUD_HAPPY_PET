@@ -22,8 +22,7 @@ namespace CRUD_HAPPY_PET.Views
         {
             InitializeComponent();
             AssociateAndRaiseEvents();
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-           
+            btnClose.Click += delegate { this.Close(); }; 
         }
 
         private void AssociateAndRaiseEvents()
@@ -69,10 +68,15 @@ namespace CRUD_HAPPY_PET.Views
 
         // Single Pattern (Open a single form instance)
         private static PetView Instance;
-        public static PetView GetInstance()
+        public static PetView GetInstance(Form parentContainer)
         {
             if (Instance == null || Instance.IsDisposed)
+            {
                 Instance = new PetView();
+                Instance.MdiParent = parentContainer;
+                Instance.FormBorderStyle = FormBorderStyle.None;
+                Instance.Dock = DockStyle.Fill;
+            }
             else
             {
                 if (Instance.WindowState == FormWindowState.Minimized)

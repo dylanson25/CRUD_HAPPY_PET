@@ -23,7 +23,7 @@ namespace CRUD_HAPPY_PET.Presenters
 
         private void ShowPetView(object? sender, EventArgs e)
         {
-            IPetView view = PetView.GetInstance();
+            IPetView view = PetView.GetInstance((MainView)mainView);
             IPetRepository repository = new PetRepository(sqlConnection);
             new PetPresenter(view, repository);
         }

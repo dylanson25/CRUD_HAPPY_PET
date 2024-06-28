@@ -39,7 +39,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 450);
+            panel1.Size = new Size(200, 533);
             panel1.TabIndex = 0;
             // 
             // btnPets
@@ -55,8 +55,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(994, 533);
             Controls.Add(panel1);
+            IsMdiContainer = true;
             Name = "MainView";
             Text = "MainView";
             panel1.ResumeLayout(false);

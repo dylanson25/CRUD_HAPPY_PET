@@ -30,6 +30,7 @@
         {
             label1 = new Label();
             panel1 = new Panel();
+            btnClose = new Button();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             dataGridView1 = new DataGridView();
@@ -69,12 +70,23 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(btnClose);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 51);
             panel1.TabIndex = 1;
+            // 
+            // btnClose
+            // 
+            btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnClose.Location = new Point(769, 3);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(28, 23);
+            btnClose.TabIndex = 7;
+            btnClose.Text = "X";
+            btnClose.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
@@ -106,15 +118,17 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.Location = new Point(8, 66);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(683, 299);
             dataGridView1.TabIndex = 6;
             // 
             // button4
             // 
+            button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button4.Location = new Point(697, 120);
             button4.Name = "button4";
             button4.Size = new Size(87, 23);
@@ -124,6 +138,7 @@
             // 
             // button3
             // 
+            button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button3.Location = new Point(697, 91);
             button3.Name = "button3";
             button3.Size = new Size(87, 23);
@@ -133,6 +148,7 @@
             // 
             // button2
             // 
+            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button2.Location = new Point(697, 62);
             button2.Name = "button2";
             button2.Size = new Size(87, 23);
@@ -142,6 +158,7 @@
             // 
             // btnSearch
             // 
+            btnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnSearch.Location = new Point(616, 37);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(75, 23);
@@ -151,6 +168,7 @@
             // 
             // txtSearch
             // 
+            txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtSearch.Location = new Point(8, 37);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(602, 23);
@@ -312,5 +330,6 @@
         private TextBox txtPetName;
         private TextBox txtPetId;
         private DataGridView dataGridView1;
+        private Button btnClose;
     }
 }
